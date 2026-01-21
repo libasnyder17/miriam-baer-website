@@ -52,6 +52,18 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--white);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.hebrew-blessing {
+  position: absolute;
+  top: 0.75rem;
+  right: 2rem;
+  font-size: 0.85rem;
+  color: #a89fa0;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.05em;
 }
 
 .brand {
@@ -546,6 +558,14 @@ nav a:hover {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
+  }
+
+  .hebrew-blessing {
+    position: static;
+    right: auto;
+    top: auto;
+    margin-bottom: 0.5rem;
+    font-size: 0.75rem;
   }
 
   nav {
