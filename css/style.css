@@ -221,28 +221,124 @@ nav a:hover {
   line-height: 1.7;
 }
 
-.about,
 .program {
   background: linear-gradient(135deg, rgba(139, 119, 214, 0.08), rgba(108, 201, 191, 0.08));
-  padding: 2rem;
-  border-radius: 10px;
+  padding: 3rem;
+  border-radius: 20px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-  border: 1px solid var(--border);
+  border: 2px solid rgba(139, 119, 214, 0.2);
+  text-align: center;
 }
 
-.about h2,
-.program h2 {
+.program-title {
+  font-size: 2.8rem;
+  font-style: italic;
+  color: var(--primary);
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.program-subtitle {
+  font-size: 1.3rem;
+  color: var(--primary);
+  margin: 0 0 2rem;
+  font-weight: 500;
+}
+
+.program-intro {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.program-intro p {
+  margin: 0 0 1rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.program-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.highlight {
+  color: var(--primary);
+  font-style: italic;
+  font-weight: 600;
+}
+
+.program-structure {
+  background: linear-gradient(135deg, rgba(139, 119, 214, 0.12), rgba(108, 201, 191, 0.12));
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.program-structure h3 {
+  font-size: 1.6rem;
+  margin: 0 0 0.5rem;
+  color: var(--primary);
+  font-style: italic;
+}
+
+.program-structure p {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.program-topics {
+  text-align: left;
+  max-width: 500px;
+  margin: 2rem auto;
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.program-topics h3 {
+  text-align: center;
   margin-top: 0;
-  font-size: 2rem;
+  font-size: 1.3rem;
   color: var(--primary);
+  font-style: italic;
 }
 
-.about h3,
-.program h3 {
-  font-size: 1.25rem;
-  margin-top: 1.5rem;
+.program-topics ul {
+  padding-left: 2rem;
+  margin: 0;
+}
+
+.program-topics li {
   margin-bottom: 0.75rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.program-details {
+  background: linear-gradient(135deg, rgba(139, 119, 214, 0.1), rgba(108, 201, 191, 0.1));
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2.5rem;
+}
+
+.program-details h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
   color: var(--primary);
+  font-style: italic;
+}
+
+.program-details p {
+  margin: 0.75rem 0;
+  color: var(--text-muted);
+  font-size: 1.1rem;
 }
 
 .about ul,
