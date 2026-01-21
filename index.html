@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Next Step Forward — Coaching with Miriam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="assets/logo.svg" alt="Miriam Baer logo" class="logo">
+      <div>
+        <h1>My Next Step Forward</h1>
+        <p class="byline">Coaching with Miriam</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="workshops.html">Workshops</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h2>Feeling overwhelmed? Affected by others’ behaviors?</h2>
+      <p class="lead">Find compassionate, non-judgmental support and take a gentle next step forward toward more peace, connection, and self-understanding.</p>
+      <div class="cta-row">
+        <a class="btn primary" href="workshops.html">Explore the Workshop Series</a>
+        <button class="btn outline" id="open-register">Register for Free Webinar</button>
+      </div>
+    </section>
+
+    <section class="intro-cards">
+      <article>
+        <h3>Compassionate Guidance</h3>
+        <p>Warm, skilled coaching to help you soften judgment, build awareness, and live more connected.</p>
+      </article>
+      <article>
+        <h3>Practical Tools</h3>
+        <p>Real-life practices for understanding triggers and creating healthier responses.</p>
+      </article>
+      <article>
+        <h3>Calm, Supportive Space</h3>
+        <p>A safe environment to explore growth without pressure or perfection.</p>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Phone: 845-270-4402 — miriambaerwebinar.com</p>
+    <p>&copy; <span id="year"></span> My Next Step Forward — Miriam Baer</p>
+  </footer>
+
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-content" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="close-modal">×</button>
+      <h3 id="modal-title">Register for the Free Introductory Webinar</h3>
+      <form id="register-form">
+        <label>Name<input type="text" name="name" required></label>
+        <label>Email<input type="email" name="email" required></label>
+        <div class="modal-actions">
+          <button class="btn primary" type="submit">Register</button>
+          <button class="btn outline" id="join-series" type="button">Join Full Workshop Series (Payment)</button>
+        </div>
+      </form>
+      <div id="modal-message" class="modal-message" hidden></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
