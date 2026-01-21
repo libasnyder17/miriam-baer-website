@@ -1,12 +1,12 @@
 :root {
-  --primary: #6b5b95;
-  --secondary: #9b8b9d;
-  --accent: #c9ada7;
-  --light-bg: #f5f3f0;
+  --primary: #8b77d6;
+  --secondary: #6cc9bf;
+  --accent: #7fb8ad;
+  --light-bg: #faf8fc;
   --white: #ffffff;
   --text-dark: #3e3a3a;
   --text-muted: #6b6b6b;
-  --border: #d4cfc7;
+  --border: #ddd3e8;
 }
 
 * {
@@ -103,10 +103,10 @@ nav a:hover {
 }
 
 .hero {
-  background: linear-gradient(135deg, rgba(139, 119, 214, 0.06), rgba(108, 201, 191, 0.06));
+  background: linear-gradient(135deg, rgba(139, 119, 214, 0.12), rgba(108, 201, 191, 0.12));
   padding: 3.5rem 2.5rem;
   border-radius: 10px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
   border: 1px solid var(--border);
   text-align: center;
   margin-bottom: 2rem;
@@ -152,14 +152,14 @@ nav a:hover {
 }
 
 .btn.primary {
-  background: var(--primary);
+  background: #8b77d6;
   color: var(--white);
 }
 
 .btn.primary:hover {
-  background: #5a4a80;
+  background: #7a62c4;
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(107, 91, 149, 0.3);
+  box-shadow: 0 6px 16px rgba(139, 119, 214, 0.35);
 }
 
 .btn.outline {
@@ -181,7 +181,7 @@ nav a:hover {
 }
 
 .intro-cards article {
-  background: linear-gradient(135deg, rgba(139, 119, 214, 0.08), rgba(108, 201, 191, 0.08));
+  background: linear-gradient(135deg, rgba(139, 119, 214, 0.1), rgba(108, 201, 191, 0.1));
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
@@ -208,7 +208,7 @@ nav a:hover {
 
 .about,
 .program {
-  background: linear-gradient(135deg, rgba(139, 119, 214, 0.06), rgba(108, 201, 191, 0.06));
+  background: linear-gradient(135deg, rgba(139, 119, 214, 0.08), rgba(108, 201, 191, 0.08));
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
@@ -255,7 +255,7 @@ nav a:hover {
 }
 
 .about a:hover {
-  color: #5a4a80;
+  color: #7a62c4;
 }
 
 .site-footer {
@@ -274,8 +274,8 @@ nav a:hover {
   font-style: italic;
   margin-top: 1rem;
   padding: 1rem;
-  background: rgba(201, 173, 167, 0.08);
-  border-left: 3px solid var(--accent);
+  background: rgba(108, 201, 191, 0.12);
+  border-left: 3px solid var(--secondary);
   border-radius: 4px;
 }
 
@@ -360,7 +360,7 @@ nav a:hover {
 .modal textarea:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(107, 91, 149, 0.1);
+  box-shadow: 0 0 0 3px rgba(139, 119, 214, 0.15);
 }
 
 .modal-actions {
@@ -372,8 +372,8 @@ nav a:hover {
 
 .modal-message {
   padding: 1rem;
-  background: rgba(201, 173, 167, 0.15);
-  border-left: 3px solid var(--accent);
+  background: rgba(108, 201, 191, 0.15);
+  border-left: 3px solid var(--secondary);
   border-radius: 6px;
   margin-top: 1rem;
   color: var(--text-dark);
@@ -400,7 +400,7 @@ nav a:hover {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  background: linear-gradient(135deg, rgba(139, 119, 214, 0.08), rgba(108, 201, 191, 0.08));
+  background: linear-gradient(135deg, rgba(139, 119, 214, 0.1), rgba(108, 201, 191, 0.1));
   padding: 2rem;
   border-radius: 10px;
   border: 1px solid var(--border);
