@@ -134,6 +134,43 @@ nav a:hover {
   margin-bottom: 3rem;
 }
 
+.intro-header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.intro-header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  width: 100%;
+}
+
+.intro-logo {
+  width: 280px;
+  height: 280px;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(61, 47, 122, 0.15));
+  margin: 0 auto;
+}
+
+.about-headshot {
+  width: 320px;
+  height: 320px;
+  border-radius: 0;
+  object-fit: cover;
+  background: #3d2f7a;
+  border: 3px solid #3d2f7a;
+  box-shadow: 0 8px 24px rgba(201, 71, 224, 0.4);
+  display: block;
+  float: right;
+  margin: 0 0 2rem 2rem;
+}
+
+
 .hero-image {
   width: 200px;
   height: 200px;
@@ -622,6 +659,22 @@ nav a:hover {
   nav {
     gap: 1rem;
     justify-content: center;
+  }
+
+  .intro-logo {
+    width: 180px;
+    height: 180px;
+  }
+
+  .about-headshot {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin: 0 0 2rem 0;
+  }
+
+  .intro-header-content {
+    gap: 1.5rem;
   }
 
   .hero {
