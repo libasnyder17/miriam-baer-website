@@ -33,13 +33,6 @@ document.addEventListener('DOMContentLoaded',function(){
   }
   function clearModalMessage(){ const el=document.getElementById('modal-message'); if(el){el.hidden=true;el.textContent='';} }
 
-  // Contact form: simple local confirmation
-  const contactForm = document.getElementById('contact-form');
-  if(contactForm){
-    contactForm.addEventListener('submit',function(e){
-      e.preventDefault();
-      alert('Thanks — your message was noted.');
-      contactForm.reset();
-    });
-  }
+  // Contact form: Netlify handles submission
+  // No additional JS needed - Netlify form submission will redirect to /thank-you/
 });
