@@ -46,28 +46,12 @@
   </main>
 
   <footer class="site-footer">
-    <p>Phone: 845-270-4402 — miriambaerwebinar.com</p>
+    <p>Phone: 845-270-4402 — <a href="https://www.linkedin.com/in/mynextstepforward/">https://www.linkedin.com/in/mynextstepforward/</a></p>
     <p>&copy; <span id="year"></span> My Next Step Forward — Miriam Baer</p>
   </footer>
 
   <script src="js/recordings-view.js"></script>
   <script src="js/main.js"></script>
-  <script>
-  (function(){
-    try {
-      if (window.netlifyIdentity) {
-        window.netlifyIdentity.on('init', function(user) {
-          if (!user) {
-            window.netlifyIdentity.on('login', function() {
-              try { window.netlifyIdentity.close(); } catch(e){}
-              window.location.href = '/admin/';
-            });
-          }
-        });
-        if (typeof window.netlifyIdentity.init === 'function') window.netlifyIdentity.init();
-      }
-    } catch (e) { console.warn('Netlify Identity handler error', e); }
-  })();
-  </script>
+  <script src="js/identity-init.js"></script>
 </body>
 </html>
