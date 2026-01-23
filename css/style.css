@@ -803,8 +803,17 @@ nav a:hover {
   position: relative;
 }
 
+.recordings-header-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
 .recordings-header h1 {
-  margin: 0 0 0.5rem;
+  margin: 0;
   font-size: 2.2rem;
   color: #3d2f7a;
 }
@@ -872,6 +881,14 @@ nav a:hover {
   margin: 0 0 1.5rem;
   color: #1ba098;
   font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.session-description {
+  margin: 0 0 1rem;
+  color: #333333;
+  font-size: 0.95rem;
+  line-height: 1.6;
   font-weight: 500;
 }
 

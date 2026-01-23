@@ -4,20 +4,9 @@
 const RECORDINGS_PASSWORD = 'recordings2026'; // Edit this to change the password
 const STORAGE_KEY = 'recordings_unlocked';
 
-const passwordGate = document.getElementById('password-gate');
 const passwordForm = document.getElementById('password-form');
 const passwordInput = document.getElementById('password-input');
 const passwordError = document.getElementById('password-error');
-const recordingsContent = document.getElementById('recordings-content');
-const lockButton = document.getElementById('lock-button');
-
-// Check if user is already unlocked
-function checkUnlocked() {
-  const isUnlocked = localStorage.getItem(STORAGE_KEY) === 'true';
-  if (isUnlocked) {
-    unlockRecordings();
-  }
-}
 
 // Handle password form submission
 function handlePasswordSubmit(e) {
@@ -27,7 +16,8 @@ function handlePasswordSubmit(e) {
   if (enteredPassword === RECORDINGS_PASSWORD) {
     passwordError.hidden = true;
     localStorage.setItem(STORAGE_KEY, 'true');
-    unlockRecordings();
+    // Redirect to recordings view page
+    window.location.href = 'recordings-view.html';
   } else {
     passwordError.textContent = 'Incorrect password. Please try again.';
     passwordError.hidden = false;
@@ -36,30 +26,17 @@ function handlePasswordSubmit(e) {
   }
 }
 
-// Unlock and show recordings content
-function unlockRecordings() {
-  passwordGate.hidden = true;
-  recordingsContent.hidden = false;
-}
-
-// Lock and hide recordings content
-function lockRecordings() {
-  passwordGate.hidden = false;
-  recordingsContent.hidden = true;
-  passwordInput.value = '';
-  passwordError.hidden = true;
-  localStorage.removeItem(STORAGE_KEY);
-  passwordInput.focus();
-}
-
 // Event listeners
 if (passwordForm) {
   passwordForm.addEventListener('submit', handlePasswordSubmit);
 }
 
-if (lockButton) {
-  lockButton.addEventListener('click', lockRecordings);
-}
-
 // Initialize on page load
-document.addEventListener('DOMContentLoaded', checkUnlocked);
+document.addEventListener('DOMContentLoaded', function() {
+  const isUnlocked = localStorage.getItem(STORAGE_KEY) === 'true';
+  if (isUnlocked) {
+    // If already unlocked, redirect to view page
+    window.location.href = 'recordings-view.html';
+  }
+});
+
