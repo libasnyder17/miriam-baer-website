@@ -150,15 +150,11 @@ nav a:hover {
 }
 
 .intro-logo {
-  width: 100%;
-  max-width: 960px;
-  height: auto;
+  width: 280px;
+  height: 280px;
   object-fit: contain;
   filter: drop-shadow(0 4px 12px rgba(61, 47, 122, 0.15));
   margin: 0 auto;
-  border: 3px solid #3d2f7a;
-  border-radius: 12px;
-  display: block;
 }
 
 .about-headshot {
@@ -679,9 +675,8 @@ nav a:hover {
   }
 
   .intro-logo {
-    width: 100%;
-    max-width: 540px;
-    height: auto;
+    width: 180px;
+    height: 180px;
   }
 
   .logo {
