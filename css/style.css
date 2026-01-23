@@ -693,3 +693,226 @@ nav a:hover {
     width: 100%;
   }
 }
+
+/* Recordings Page */
+.password-gate {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  padding: 2rem;
+}
+
+.password-gate-content {
+  background: var(--white);
+  padding: 3rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(61, 47, 122, 0.1);
+  border: 2px solid #3d2f7a;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+}
+
+.password-gate h2 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+  color: #3d2f7a;
+}
+
+.password-gate-subtitle {
+  margin: 0 0 2rem;
+  color: #1ba098;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.password-instructions {
+  margin: 0;
+  color: #333333;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.password-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.password-input-group input {
+  padding: 0.85rem;
+  border: 2px solid #3d2f7a;
+  border-radius: 6px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+.password-input-group input:focus {
+  outline: none;
+  border-color: #1ba098;
+  box-shadow: 0 0 0 3px rgba(27, 160, 152, 0.15);
+}
+
+.password-error {
+  color: #d32f2f;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 0.75rem;
+  background: rgba(211, 47, 47, 0.08);
+  border-radius: 6px;
+}
+
+.password-note {
+  margin: 0;
+  font-size: 0.85rem;
+  color: #666666;
+  font-style: italic;
+  line-height: 1.5;
+}
+
+.recordings-content {
+  padding: 2rem 0;
+}
+
+.recordings-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.recordings-header h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2.2rem;
+  color: #3d2f7a;
+}
+
+.recordings-note {
+  margin: 0 0 1.5rem;
+  color: #666666;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.recordings-header .btn {
+  margin-top: 1rem;
+}
+
+.recordings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.recording-card {
+  background: linear-gradient(135deg, rgba(201, 71, 224, 0.1), rgba(27, 160, 152, 0.1));
+  padding: 2rem;
+  border-radius: 10px;
+  border: 2px solid #3d2f7a;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.recording-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #5db75c, #1ba098);
+  border-radius: 10px 10px 0 0;
+}
+
+.recording-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.recording-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+  color: #5db75c;
+  font-weight: 700;
+}
+
+.session-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+  color: #3d2f7a;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.session-date {
+  margin: 0 0 1.5rem;
+  color: #1ba098;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.watch-btn {
+  margin-top: auto;
+  align-self: flex-start;
+  padding: 0.85rem 1.5rem;
+}
+
+.recording-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(27, 160, 152, 0.2);
+  border-color: #1ba098;
+}
+
+.recordings-updated {
+  text-align: center;
+  margin: 2rem 0 0;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+  color: #999999;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+.btn.small {
+  padding: 0.7rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .password-gate-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .password-gate h2 {
+    font-size: 1.6rem;
+  }
+
+  .recordings-header h1 {
+    font-size: 1.6rem;
+  }
+
+  .recordings-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .password-input-group {
+    flex-direction: column;
+  }
+
+  .password-input-group .btn {
+    width: 100%;
+  }
+}
