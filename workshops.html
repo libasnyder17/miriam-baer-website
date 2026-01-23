@@ -6,6 +6,7 @@
   <title>Workshops — Accepting the People Around Us</title>
   <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -70,6 +71,23 @@
     <p>Phone: 845-270-4402 — miriambaerwebinar.com</p>
   </footer>
 
+  <script>
+  (function(){
+    try {
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', function(user) {
+          if (!user) {
+            window.netlifyIdentity.on('login', function() {
+              try { window.netlifyIdentity.close(); } catch(e){}
+              window.location.href = '/admin/';
+            });
+          }
+        });
+        if (typeof window.netlifyIdentity.init === 'function') window.netlifyIdentity.init();
+      }
+    } catch (e) { console.warn('Netlify Identity handler error', e); }
+  })();
+  </script>
   <script src="js/main.js"></script>
 </body>
 </html>
