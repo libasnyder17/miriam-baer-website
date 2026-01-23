@@ -1,0 +1,25 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+site_url: "/"
+
+collections:
+  - name: "recordings"
+    label: "Recordings"
+    editor:
+      preview: false
+    files:
+      - label: "Recordings Data"
+        name: "recordings-data"
+        file: "content/recordings.json"
+        fields:
+          - { label: "Workshop Title", name: "workshop_title", widget: "string", hint: "Title shown at top of recordings page" }
+          - { label: "Sessions", name: "sessions", widget: "list", hint: "Add sessions in order. Leave 'Link' blank until the recording is available.", fields: [
+              { label: "Session title", name: "session_title", widget: "string" },
+              { label: "Date", name: "date", widget: "string", hint: "e.g. February 10, 2026" },
+              { label: "Zoom link", name: "link", widget: "string", required: false, hint: "Paste full Zoom recording URL or leave blank" }
+            ] }
