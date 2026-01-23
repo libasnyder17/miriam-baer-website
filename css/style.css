@@ -249,6 +249,19 @@ nav a:hover {
   box-shadow: 0 10px 24px rgba(27, 160, 152, 0.4);
 }
 
+.btn.dark {
+  background: #3d2f7a;
+  color: var(--white);
+  border-color: #3d2f7a;
+}
+
+.btn.dark:hover {
+  background: #2a1f52;
+  border-color: #2a1f52;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(61, 47, 122, 0.4);
+}
+
 .intro-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
