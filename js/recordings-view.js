@@ -43,7 +43,7 @@ function renderRecordings(data) {
     article.className = 'recording-card';
 
     const h3 = document.createElement('h3');
-    h3.textContent = `Session ${idx + 1}`;
+    h3.textContent = `Session ${s.session_number || (idx + 1)}`;
     article.appendChild(h3);
 
     const st = document.createElement('p');
