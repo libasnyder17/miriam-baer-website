@@ -262,6 +262,124 @@ nav a:hover {
   box-shadow: 0 10px 24px rgba(61, 47, 122, 0.4);
 }
 
+.cta-primary-wrap {
+  margin: 2.5rem 0 1.5rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btn-hero {
+  display: inline-block;
+  padding: 1.2rem 2.5rem;
+  background: #c947e0;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(201, 71, 224, 0.3);
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+}
+
+.btn-hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(201, 71, 224, 0.4);
+  background: #b02ad0;
+}
+
+.btn-hero-title {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.btn-hero-subtitle {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 400;
+  opacity: 0.95;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  color: #c947e0;
+  border: 2px solid #c947e0;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.btn-secondary:hover {
+  background: #c947e0;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(201, 71, 224, 0.3);
+}
+
+.already-enrolled {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.btn-tertiary {
+  color: #1ba098;
+  text-decoration: none;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.btn-tertiary:hover {
+  border-bottom-color: #1ba098;
+  color: #158076;
+}
+
+@media (min-width: 769px) {
+  .cta-primary-wrap {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+  
+  .btn-hero,
+  .btn-secondary {
+    flex: 0 1 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-hero {
+    width: 100%;
+    padding: 1.5rem 2rem;
+  }
+  
+  .btn-hero-title {
+    font-size: 1.3rem;
+  }
+  
+  .btn-hero-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .btn-secondary {
+    width: 100%;
+  }
+}
+
 .intro-cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
