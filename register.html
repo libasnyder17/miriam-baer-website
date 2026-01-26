@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <title>Register for Full Series — My Next Step Forward</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <style>
+    .registration-form {
+      max-width: 600px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #f9f9f9;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .registration-form h2 {
+      margin-top: 0;
+      color: #c947e0;
+      text-align: center;
+    }
+    .registration-form p {
+      text-align: center;
+      margin-bottom: 2rem;
+      color: #555;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #333;
+    }
+    .form-group label .optional {
+      font-weight: 400;
+      color: #777;
+      font-size: 0.9em;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-family: 'Nunito', sans-serif;
+      box-sizing: border-box;
+    }
+    .form-group input:focus {
+      outline: none;
+      border-color: #1ba098;
+      box-shadow: 0 0 0 3px rgba(27, 160, 152, 0.1);
+    }
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+      background: #c947e0;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Nunito', sans-serif;
+      transition: background 0.3s ease;
+    }
+    .submit-btn:hover {
+      background: #3d2f7a;
+    }
+    .form-info {
+      margin-top: 1.5rem;
+      padding: 1rem;
+      background: #fff;
+      border-left: 4px solid #1ba098;
+      font-size: 0.95rem;
+    }
+    .form-info h4 {
+      margin-top: 0;
+      color: #c947e0;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="hebrew-blessing">בס״ד</div>
+    <div class="brand">
+      <img src="assets/Miriam-logo copy.png" alt="logo" class="logo">
+      <div>
+        <h1>My Next Step Forward</h1>
+        <p class="byline">Coaching with Miriam</p>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="workshops.html">Workshops</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <div class="registration-form">
+      <h2>Register for the Full Workshop Series</h2>
+      <p>Accepting the People Around Us — Transformational Workshop Series</p>
+
+      <form name="full-series-enroll" method="POST" data-netlify="true" action="/thank-you/">
+        <input type="hidden" name="form-name" value="full-series-enroll">
+        
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone <span class="optional">(optional)</span></label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Registration</button>
+      </form>
+
+      <div class="form-info">
+        <h4>What's Next?</h4>
+        <p><strong>Currently:</strong> After submitting, you'll receive a confirmation. We'll be in touch with payment details soon.</p>
+        <p><strong>Starting Date:</strong> Tuesday, February 10, 2026 at 8:15 PM</p>
+        <p><strong>Format:</strong> Live on Zoom, Tuesday evenings</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>Phone: 845-270-4402 — <a href="https://www.linkedin.com/in/mynextstepforward/">https://www.linkedin.com/in/mynextstepforward/</a></p>
+  </footer>
+
+  <script>
+  (function(){
+    try {
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on('init', function(user) {
+          if (!user) {
+            window.netlifyIdentity.on('login', function() {
+              try { window.netlifyIdentity.close(); } catch(e){}
+              window.location.href = '/admin/';
+            });
+          }
+        });
+        if (typeof window.netlifyIdentity.init === 'function') window.netlifyIdentity.init();
+      }
+    } catch (e) { console.warn('Netlify Identity handler error', e); }
+  })();
+  </script>
+  <script src="js/main.js"></script>
+  <script src="js/identity-init.js"></script>
+</body>
+</html>
