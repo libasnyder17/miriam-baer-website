@@ -39,17 +39,27 @@ function renderRecordings(data) {
 
   recordingsGrid.innerHTML = '';
   sessions.forEach((s, idx) => {
-    const article = document.createElement('article');
-    article.className = 'recording-card';
+    const link = (s.link || '').trim();
+    
+    // If there's a link, make the entire card clickable
+    let article;
+    if (link) {
+      article = document.createElement('a');
+      article.href = link;
+      article.target = '_blank';
+      article.rel = 'noopener noreferrer';
+      article.className = 'recording-card recording-card-link';
+      article.style.textDecoration = 'none';
+      article.style.color = 'inherit';
+      article.style.cursor = 'pointer';
+    } else {
+      article = document.createElement('article');
+      article.className = 'recording-card';
+    }
 
     const h3 = document.createElement('h3');
-    h3.textContent = `Session ${s.session_number || (idx + 1)}`;
+    h3.textContent = s.session_title || '';
     article.appendChild(h3);
-
-    const st = document.createElement('p');
-    st.className = 'session-title';
-    st.textContent = s.session_title || '';
-    article.appendChild(st);
 
     if (s.description) {
       const sd = document.createElement('p');
@@ -63,16 +73,7 @@ function renderRecordings(data) {
     date.textContent = s.date || '';
     article.appendChild(date);
 
-    const link = (s.link || '').trim();
-    if (link) {
-      const a = document.createElement('a');
-      a.className = 'btn primary watch-btn';
-      a.href = link;
-      a.target = '_blank';
-      a.rel = 'noopener noreferrer';
-      a.textContent = 'Watch Recording';
-      article.appendChild(a);
-    } else {
+    if (!link) {
       const p = document.createElement('p');
       p.className = 'note';
       p.textContent = 'Recording coming soon';

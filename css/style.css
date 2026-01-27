@@ -1216,6 +1216,16 @@ nav a:hover {
   border-color: #1ba098;
 }
 
+.recording-card-link {
+  transition: all 0.3s ease;
+}
+
+.recording-card-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(27, 160, 152, 0.3);
+  border-color: #5db75c;
+}
+
 .recordings-updated {
   text-align: center;
   margin: 2rem 0 0;
