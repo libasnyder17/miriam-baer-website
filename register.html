@@ -119,7 +119,7 @@
       <p>Accepting the People Around Us — Transformational Workshop Series</p>
       <div class="price-box">$375 for 6 sessions</div>
 
-      <form name="full-series-enroll" method="POST" data-netlify="true" action="/thank-you/">
+      <form name="full-series-enroll" method="POST" data-netlify="true" id="registration-form">
         <input type="hidden" name="form-name" value="full-series-enroll">
         
         <div class="form-group">
@@ -174,6 +174,27 @@
       }
     } catch (e) { console.warn('Netlify Identity handler error', e); }
   })();
+
+  // Handle form submission - submit to Netlify then redirect to Stripe
+  document.getElementById('registration-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const formData = new FormData(this);
+    
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(formData).toString()
+    })
+    .then(() => {
+      // After successful submission, redirect to Stripe
+      window.location.href = 'https://buy.stripe.com/fZudR92072z7bwBeXe4ko01';
+    })
+    .catch((error) => {
+      alert('There was an error submitting the form. Please try again.');
+      console.error('Form submission error:', error);
+    });
+  });
   </script>
   <script src="js/main.js"></script>
   <script src="js/identity-init.js"></script>
