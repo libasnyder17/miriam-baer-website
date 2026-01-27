@@ -9,6 +9,65 @@
   <link rel="stylesheet" href="css/style.css">
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   <style>
+    .registration-form {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .registration-form h3 {
+      margin-top: 0;
+      color: #c947e0;
+      text-align: center;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.75rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-family: 'Nunito', sans-serif;
+      box-sizing: border-box;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: #1ba098;
+      box-shadow: 0 0 0 3px rgba(27, 160, 152, 0.1);
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 1rem;
+      background: #c947e0;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Nunito', sans-serif;
+      transition: background 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background: #3d2f7a;
+    }
+
     .event-section {
       background: var(--white);
       border-radius: 12px;
@@ -99,6 +158,35 @@
         <p>Join us for a supportive and inspiring introduction to our transformational workshop series. Discover practical tools for building awareness, softening judgment, and living a more connected and peaceful life.</p>
       </div>
 
+      <div class="registration-form">
+        <h3>Register for the Free Introduction Workshop</h3>
+        <form name="free-intro-registration" method="POST" data-netlify="true" action="/thank-you/">
+          <input type="hidden" name="form-name" value="free-intro-registration">
+          
+          <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" required>
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+
+          <button type="submit" class="submit-btn">Register for Free Workshop</button>
+        </form>
+      </div>
+
       <!-- LIVE SESSION SECTION - Shows before/during event -->
       <div id="live-section" class="event-section hidden">
         <h2>Join Us Live on Zoom</h2>
@@ -106,7 +194,6 @@
         <div class="event-details">
           <p><strong>Workshop:</strong> Accepting the People Around Us – Introduction</p>
           <p><strong>Date & Time:</strong> February 8, 2026 at 8:15 PM ET</p>
-          <p><strong>Duration:</strong> 90 minutes</p>
         </div>
 
         <div class="event-cta">
@@ -134,7 +221,6 @@
         <div class="event-details">
           <p><strong>Workshop:</strong> Accepting the People Around Us – Introduction</p>
           <p><strong>Recorded:</strong> February 8, 2026</p>
-          <p><strong>Duration:</strong> 90 minutes</p>
         </div>
 
         <div class="intro-text">
