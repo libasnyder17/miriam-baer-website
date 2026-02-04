@@ -627,6 +627,46 @@ nav a:hover {
   font-size: 1.1rem;
 }
 
+/* Topics and Video Grid Layout */
+.topics-video-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin: 2.5rem auto;
+  max-width: 1100px;
+}
+
+@media (min-width: 768px) {
+  .topics-video-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+.topics-video-grid .program-topics {
+  margin: 0;
+  max-width: none;
+}
+
+.video-rectangle {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 2px solid var(--navy);
+  border-left: 5px solid var(--magenta);
+  box-shadow: 0 4px 12px rgba(26, 36, 86, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.workshop-video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
 .program-structure {
   background: var(--white);
   padding: 2rem;
