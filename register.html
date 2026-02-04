@@ -90,8 +90,32 @@
       border-radius: 8px;
       text-align: center;
       margin: 1.5rem 0;
-      font-size: 1.5rem;
+    }
+    .price-old {
+      font-size: 1.3rem;
+      color: #555;
+      text-decoration: line-through;
       font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .price-new {
+      font-size: 2rem;
+      color: #c947e0;
+      font-weight: 700;
+      margin: 0.5rem 0;
+    }
+    .promo-message {
+      font-size: 1rem;
+      color: #1a2456;
+      font-weight: 600;
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid rgba(201, 71, 224, 0.3);
+    }
+    .promo-code {
+      color: #c947e0;
+      font-weight: 700;
+      letter-spacing: 0.5px;
     }
   </style>
 </head>
@@ -117,7 +141,11 @@
     <div class="registration-form">
       <h2>Register for the Full Workshop Series</h2>
       <p>Accepting the People Around Us — Transformational Workshop Series</p>
-      <div class="price-box">$375 for 6 sessions</div>
+      <div class="price-box">
+        <div class="price-old">$375 for 6 sessions</div>
+        <div class="price-new">$295 for 6 sessions</div>
+        <div class="promo-message">Save $80 with promo code <span class="promo-code">READYTOACCEPT</span></div>
+      </div>
 
       <form name="full-series-enroll" method="POST" data-netlify="true" id="registration-form">
         <input type="hidden" name="form-name" value="full-series-enroll">
