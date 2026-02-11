@@ -73,6 +73,17 @@ function renderRecordings(data) {
     date.textContent = s.date || '';
     article.appendChild(date);
 
+    if (s.passcode) {
+      const passcodeDiv = document.createElement('div');
+      passcodeDiv.className = 'session-passcode';
+      passcodeDiv.style.marginTop = '0.5rem';
+      passcodeDiv.style.padding = '0.5rem';
+      passcodeDiv.style.backgroundColor = '#f0f0f0';
+      passcodeDiv.style.borderRadius = '4px';
+      passcodeDiv.innerHTML = `<strong>Passcode:</strong> ${s.passcode}`;
+      article.appendChild(passcodeDiv);
+    }
+
     if (!link) {
       const p = document.createElement('p');
       p.className = 'note';
