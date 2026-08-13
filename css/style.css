@@ -533,7 +533,7 @@ nav a:hover {
 
 @media (min-width: 768px) {
   .workshop-info-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
   }
 }
